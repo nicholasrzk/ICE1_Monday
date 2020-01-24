@@ -47,7 +47,5 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   // insert two methods to generate random value and suit here
-   
-    
+   // insert two methods to generate random value and suit here 
 }
