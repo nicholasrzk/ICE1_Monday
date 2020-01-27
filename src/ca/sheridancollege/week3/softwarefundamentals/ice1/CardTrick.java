@@ -36,7 +36,10 @@ public class CardTrick {
        {
         if(suit.equals(magicHand[i].getSuit())&& value==(magicHand[i].getValue())) 
         System.out.println("Your card is in the suit");
+        else
+            System.out.println("Card not found");
        }
+       
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here to find matching card is in array or not
         //Then report the result here
