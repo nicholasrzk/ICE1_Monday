@@ -48,4 +48,17 @@ public class Card {
         this.value = value;
     }
    // insert two methods to generate random value and suit here 
+    
+        public String randomSuit() 
+        {
+            int value = (int) (Math.random() * 4) + 0;
+            return SUITS[value];
+        }
+
+        public int randomValue() 
+        {
+            return (int) Math.floor((Math.random() * 13) + 1);
+        
+        }
+
 }
