@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+import java.util.Random;
 
 /**
  * A class that models playing card Objects. Cards have 
@@ -18,6 +19,10 @@ public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
+   private int randomNum;
+   private int randomSuit;
+   
+   
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
@@ -48,4 +53,12 @@ public class Card {
         this.value = value;
     }
    // insert two methods to generate random value and suit here 
+    
+    public int randomNum(){
+        return (int)(Math.random() * ((13 - 1) + 1)) + 1;
+    }
+    
+    public  int randomSuit(){
+        return (int)(Math.random() * ((3 - 0) + 1)) + 0;
+    }
 }
