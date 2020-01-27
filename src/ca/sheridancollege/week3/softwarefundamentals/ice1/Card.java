@@ -2,17 +2,17 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- Carlos Victor Torres/991536668*/
+ */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 /**
  * A class that models playing card Objects. Cards have
- * a value (note that Ace = 1, Jack = 11, Queen =12, King = 13)
+ * a value (note that Ace = 1, Jack -11, Queen =12, King = 13)
  * A suit (clubs, hearts, spades, diamonds).
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
- * @author Salmah Alli
+ * @author srinivsi###
  */
 public class Card {
 
@@ -34,7 +34,7 @@ public class Card {
         this.suit = suit;
     }
 
-    /******
+    /**
      * @return the value
      */
     public int getValue() {
@@ -45,18 +45,28 @@ public class Card {
      * @param value the value to set
      */
     public void setValue(int value) {
+
         this.value = value;
+
+    }
+    public int genrateCard(){
+
+        return  value = (int) ((Math.random())*14+1);
+
     }
 
-    public int RandomValue() {
-        int number = (int) (Math.random()*13+1);
-        return number;
+    public String genrateSuite(){
+        int i = (int)(Math.random()*3);
+        return SUITS[i];
+
     }
 
-    public String getRandomSuit() {
-        int number = (int) (Math.random()*3+0);
-        return number;
-    }
-    //Write two methods to generate random number of values and suits here
 
+    @Override
+    public String toString() {
+        return "Card{" +
+                "suit='" + suit + '\'' +
+                ", value=" + value +
+                '}';
+    }
 }

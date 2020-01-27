@@ -23,8 +23,8 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            c.setSuit(c.getRandomSuit());
-            c.setValue(c.getValue());
+            c.setSuit(c.genrateSuite());
+            c.setValue(c.genrateCard());
         }
 
         System.out.println("Please enter value");
